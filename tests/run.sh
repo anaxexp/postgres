@@ -72,9 +72,9 @@ echo -n "Checking ignored tables from backup/import... "
 echo "OK"
 
 echo -n "Running import from URL source (.zip)... "
-postgres make import source="https://s3.amazonaws.com/wodby-sample-files/postgres-import-test/export.zip"
+postgres make import source="https://s3-us-west-1.amazonaws.com/anaxexp-sample-files/postgres-import-test/export.zip"
 echo "OK"
 
 echo -n "Running import from URL source (.tar.gz)... "
-postgres make import source="https://s3.amazonaws.com/wodby-sample-files/postgres-import-test/export.tar.gz"
+postgres make import source="https://s3-us-west-1.amazonaws.com/anaxexp-sample-files/postgres-import-test/export.tar.gz"
 echo "OK"

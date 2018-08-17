@@ -16,9 +16,9 @@ if [[ -z "${POSTGRES_DB}" ]]; then
 fi
 
 mkdir -p /etc/postgresql/
-gotpl "/etc/gotpl/postgresql-${POSTGRES_MAJOR_VER}.conf.tpl" > "/etc/postgresql/postgresql.conf"
+gotpl "/etc/gotpl/postgresql-${POSTGRES_MAJOR_VER}.conf.tmpl" > "/etc/postgresql/postgresql.conf"
 
-if [[ $1 == 'make' ]]; then
+if [[ "${1}" == "make" ]]; then
     exec "${@}" -f /usr/local/bin/actions.mk
 else
     exec /usr/local/bin/docker-entrypoint.sh "${@}"
